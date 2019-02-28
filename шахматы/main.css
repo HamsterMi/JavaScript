@@ -1,0 +1,35 @@
+ * {
+     margin: 0;
+ }
+
+ #board {
+     width: 500px;
+     height: 500px;
+     border: 1px solid black;
+ }
+
+ .chessCell {
+     outline: 1px solid black;
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     vertical-align: middle;
+     display: inline-block;
+     font-size: 30px;
+ }
+
+ .blackChess {
+     color: black;
+ }
+
+ .whiteChess {
+     color: rgb(197, 196, 143);
+ }
+
+ .white {
+     background-color: white;
+ }
+
+ .black {
+     background-color: brown;
+ }
