@@ -2,7 +2,6 @@
 
 let game = {
   tickInterval: null,
-  counter: null,
 
   init(userSettings = {}) {
     Object.assign(settings, userSettings);
@@ -19,7 +18,6 @@ let game = {
     //создаем счетчик
     //в  this.counter вернется return - увеличение счетчика
     this.counter = this.makeCounter();
-    console.log(this.counter);
     snake.init(this.getStartSnakePoint(), "up");
     food.setCoordinates(this.getRandomCoordinates(food));
     barrier.setCoordinates(this.getRandomCoordinates(barrier));
@@ -77,13 +75,13 @@ let game = {
 
     if (food.isFoodPoint(snake.getNextStepHeadPoint())) {
       snake.incrementBody();
-
       //Счетчик увеличиваем
       this.counter();
       food.setCoordinates(this.getRandomCoordinates(food));
       barrier.setCoordinates(this.getRandomCoordinates(barrier));
 
       if (this.isGameWon()) {
+        this.finish();
       }
     }
 
